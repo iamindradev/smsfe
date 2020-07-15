@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <script src="query.js"></script>
+</head>
+<body ng-app="app" ng-controller="query">
+<table class="table">
+    <thead>
+        <tr>
+            <th>query</th>
+            <th>Library</th>
+            <th>NAME  </th>
+            <th>FATHER NAME  </th>
+            <th>course </th>
+            <th>branch</th>
+            <th>section</th>
+            <th>contact</th>
+            <th>email</th>
+            <th>date</th>
+            <th>accept</th>
+            <th>reject</th>
+        </tr>
+        <tbody>
+            <tr ng-repeat="x in queries">
+                <td>{{x.query}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.key__lib_id}}</td>
+                <td>{{x.key__name}}</td>
+                <td>{{x.key__father_name}}</td>
+                <td>{{x.key__course}}</td>
+                <td>{{x.key__branch}}</td>
+                <td>{{x.key__sec}}</td>
+                <td>{{x.key__email}}</td>
+                <td>{{x.key__mobile_no}}</td>
+                <td><button ng-click="acceptquery(x)">ACCEPT</button></td>
+                <td><button ng-click="rejectquery(x)">REJECT</button></td>
+            </tr>
+        </tbody>
+
+    </thead>
+</table>
+</body>
+</html>
