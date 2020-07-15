@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL STUDENTS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="allstudents.js"></script>
+   
+</head>
+<body ng-app="app" ng-controller="allstudents">
+    <div container-fluid>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Library</th>
+                        <th>NAME  </th>
+                        <th>FATHER NAME  </th>
+                        <th>course </th>
+                        <th>branch</th>
+                        <th>section</th>
+                        <th>contact</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in allstds">
+                        <td>{{x.lib_id}}</td>
+                        <td>{{x.name}}</td>
+                        <td>{{x.father_name}}</td>
+                        <td>{{x.course}}</td>
+                        <td>{{x.branch}}</td>
+                        <td>{{x.sec}}</td>
+                        <td>{{x.mobile_no}}</td>
+                        <td>{{x.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
