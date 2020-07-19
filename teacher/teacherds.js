@@ -3,7 +3,7 @@ app.controller("teacherds",function($scope, $http){
     $scope.allstudents =function(){
         $http({
             method:"GET",
-            url:"127.0.0.1:8000/login/students/"
+            url:"http://6ce91d4cb417.ngrok.io/login/students/"
         }).then(function(res){
             console.log(res.data[0])
             $scope.students = JSON.parse(JSON.stringify( res.data[0]));
@@ -13,7 +13,7 @@ app.controller("teacherds",function($scope, $http){
     $scope.addstudent=function(){
         $http({
             method:"POST",
-            url:"http://5117794dcd51.ngrok.io/addstudent/",
+            url:"http://6ce91d4cb417.ngrok.io/addstudent/",
             data:{
                'lib_id':$scope.libraryid,
                'name':$scope.name,
@@ -24,10 +24,10 @@ app.controller("teacherds",function($scope, $http){
                'email':$scope.email,
                'mobile_no':$scope.contact,
                
-            },
+            },  
         }).then(function(res){
             console.log(res.data)
-            if (res.data == "added successfully")
+            if (res.data == "successful")
             document.getElementById("output").innerHTML="added succesfully"
             else
             document.getElementById("output").innerHTML="something is wrong"
